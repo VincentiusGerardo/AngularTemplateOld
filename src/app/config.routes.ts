@@ -5,21 +5,9 @@ import { AboutComponent } from './about/about.component';
 import { TestComponent } from './test/test.component';
 
 export const states = [
-    {
-        name: 'home',
-        url: '/',
-        component: HomeComponent 
-      },
-      {
-        name: 'about',
-        url: '/About/:id',
-        component: AboutComponent 
-      },
-      {
-        name: 'test',
-        url: '/Test',
-        component: TestComponent 
-      },
+    { name: 'home', url: '/', component: HomeComponent  },
+    { name: 'about',url: '/About/:id', component: AboutComponent },
+    { name: 'test', url: '/Test', component: TestComponent },
 ]
 
 export function uiRouterConfig(router: UIRouter) {
