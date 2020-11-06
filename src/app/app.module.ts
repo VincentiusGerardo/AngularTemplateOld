@@ -10,7 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { TestComponent } from './test/test.component';
 import { states, uiRouterConfig } from './config.routes';
-
+import { CommonModule } from './common/common.module';
 
 
 @NgModule({
@@ -24,6 +24,7 @@ import { states, uiRouterConfig } from './config.routes';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     UIRouterModule.forRoot({ 
       states: states,
       useHash: true,

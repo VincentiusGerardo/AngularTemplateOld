@@ -31,5 +31,3 @@ export function uiRouterConfig(router: UIRouter) {
     //states.forEach(state => router.stateRegistry.register(state));
     
 }
-
-export const router = new UIRouter();

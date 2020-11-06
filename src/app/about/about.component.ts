@@ -1,7 +1,6 @@
-
+import { CommonModule } from './../common/common.module';
 import { UIRouter, Transition } from '@uirouter/angular';
 import { Component } from '@angular/core';
-import { common } from '../common/common';
 
 @Component({
   selector: 'app-about',
@@ -11,12 +10,12 @@ import { common } from '../common/common';
 export class AboutComponent { 
   title = this.uiRouter.globals.params.id;
 
-  constructor(private uiRouter: UIRouter){
+  constructor(private uiRouter: UIRouter, private common: CommonModule){
     alert('Hello World!');
   }
 
   refresh(){
     //common.refreshState();
-    this.uiRouter.stateService.reload();
+    this.common.refreshState();
   }
 }
