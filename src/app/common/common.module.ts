@@ -12,8 +12,8 @@ import { CommonModule as CommonAngular } from '@angular/common';
   ]
 })
 export class CommonModule {
-  constructor(private router: UIRouter) { }
-
+  constructor(public router: UIRouter, private http: HttpClientModule) { }
+  
   // refresh the page
   refreshState() {
     this.router.stateService.reload();
@@ -21,7 +21,7 @@ export class CommonModule {
 
   // GET data from API
   get() {
-
+    //return this
   }
 
   // POST data to API

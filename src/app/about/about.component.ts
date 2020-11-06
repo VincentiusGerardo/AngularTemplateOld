@@ -8,9 +8,9 @@ import { Component } from '@angular/core';
   //styleUrls: ['./app.component.css']
 })
 export class AboutComponent { 
-  title = this.uiRouter.globals.params.id;
+  title = this.common.router.globals.params.id;
 
-  constructor(private uiRouter: UIRouter, private common: CommonModule){
+  constructor(private common: CommonModule){
     alert('Hello World!');
   }
 

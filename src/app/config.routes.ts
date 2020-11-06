@@ -28,6 +28,5 @@ export function uiRouterConfig(router: UIRouter) {
     router.urlService.rules.initial({ state: 'home' });
     router.urlService.rules.otherwise('/');
 
-    //states.forEach(state => router.stateRegistry.register(state));
-    
+    //states.forEach(state => router.stateRegistry.register(state)); 
 }

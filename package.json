@@ -33,6 +33,7 @@
     "rxjs": "~6.6.0",
     "toastr": "^2.1.4",
     "tslib": "^1.14.1",
+    "universal-cookie": "^4.0.4",
     "utf-8-validate": "^5.0.2",
     "zone.js": "~0.10.2"
   },
