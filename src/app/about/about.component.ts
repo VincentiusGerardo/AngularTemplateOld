@@ -1,5 +1,5 @@
 import { CommonModule } from './../common/common.module';
-import { UIRouter, Transition } from '@uirouter/angular';
+import { logSuccess } from '../common/toast';
 import { Component } from '@angular/core';
 
 @Component({
@@ -16,6 +16,7 @@ export class AboutComponent {
 
   refresh(){
     //common.refreshState();
-    this.common.refreshState();
+    //this.common.refreshState();
+    logSuccess('Udah bisa nih')
   }
 }

@@ -20,13 +20,24 @@ export class CommonModule {
   }
 
   // GET data from API
-  get() {
-    //return this
+  async get(url: string) {
+    return fetch(config.webApiHost + url)
+    .then(response => response.json())
+    .catch(e => alert(e));
   }
 
   // POST data to API
-  post() {
-
+  async post(url: string, params) {
+    return fetch(config.webApiHost + url,  {
+      method: 'POST',
+      headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(params)
+  })
+    .then(response => response.json())
+    .catch(e => alert(e));
   }
 
   // download file from server
