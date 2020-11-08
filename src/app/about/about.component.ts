@@ -1,3 +1,4 @@
+import { AuthenticationService } from './../service/authentication.service';
 import { CommonModule } from './../common/common.module';
 import { logSuccess } from '../common/toast';
 import { Component } from '@angular/core';
@@ -8,15 +9,19 @@ import { Component } from '@angular/core';
   //styleUrls: ['./app.component.css']
 })
 export class AboutComponent { 
-  title = this.common.router.globals.params.id;
+  //title = this.common.router.globals.params.id;
+  username = "";
 
-  constructor(private common: CommonModule){
-    alert('Hello World!');
+  constructor(private common: CommonModule, private authService: AuthenticationService){
+    authService.getUser().then(resp => {
+      //console.log(resp[0]);
+      this.username = resp[0].username;
+    })
   }
 
   refresh(){
     //common.refreshState();
-    //this.common.refreshState();
-    logSuccess('Udah bisa nih')
+    this.common.refreshState();
+    //logSuccess('Udah bisa nih')
   }
 }

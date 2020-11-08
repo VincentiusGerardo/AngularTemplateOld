@@ -1,8 +1,12 @@
-<!-- {{title}}
-<app-layout></app-layout>
-<app-home></app-home> -->
-
-<a uiSref="home" uiSrefActive="active">Hello</a>
-<a uiSref="about" uiSrefActive="active" [uiParams]="{ id: 'New' }">About</a>
-<a uiSref="test" uiSrefActive="active">Testing</a>
-<ui-view></ui-view>
+<div class="container-fluid d-flex flex-column min-vh-100">
+    <header class="clearfix" flex="100">
+        <app-topnav></app-topnav>
+    </header>
+    <div class="container-fluid">
+        <div id="whiteSpace"></div>
+        <ui-view></ui-view>
+    </div>
+    <footer class="fixed-bottom bg-light">    
+        <p class="text-center">{{footer}}</p>
+    </footer>
+</div>

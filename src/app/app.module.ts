@@ -1,6 +1,5 @@
 import { UIRouterModule } from '@uirouter/angular';
 import { TopnavComponent } from './layout/topnav.component';
-import { LayoutComponent } from './layout/layout.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -11,13 +10,12 @@ import { AboutComponent } from './about/about.component';
 import { TestComponent } from './test/test.component';
 import { states, uiRouterConfig } from './config.routes';
 import { CommonModule } from './common/common.module';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LayoutComponent,
     TopnavComponent,
     AboutComponent,
     TestComponent
@@ -29,7 +27,8 @@ import { CommonModule } from './common/common.module';
       states: states,
       useHash: true,
       config: uiRouterConfig
-    })
+    }),
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
