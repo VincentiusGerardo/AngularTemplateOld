@@ -21,7 +21,8 @@ export class AboutComponent {
 
   refresh(){
     //common.refreshState();
-    this.common.refreshState();
+    //this.common.refreshState();
+    console.log(document.cookie);
     //logSuccess('Udah bisa nih')
   }
 }

@@ -9,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class TopnavComponent { 
   title=config.appName;
+  initial = config.appName.split(/\s/).reduce((response,word)=> response+=word.slice(0,1),'')
+  
+  public isMenuCollapsed = true;
 }
