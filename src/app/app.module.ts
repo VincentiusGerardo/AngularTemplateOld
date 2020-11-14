@@ -11,6 +11,8 @@ import { TestComponent } from './test/test.component';
 import { states, uiRouterConfig } from './config.routes';
 import { CommonModule } from './common/common.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppMaterialModule } from './app-material.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
       useHash: true,
       config: uiRouterConfig
     }),
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule,
+    AppMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
