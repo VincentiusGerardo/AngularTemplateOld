@@ -12,7 +12,8 @@ import { states, uiRouterConfig } from './config.routes';
 import { CommonModule } from './common/common.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AppMaterialModule } from './app-material.module';
+import { AppMaterialModule } from './app-material';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AppMaterialModule } from './app-material.module';
     HomeComponent,
     TopnavComponent,
     AboutComponent,
-    TestComponent
+    TestComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
